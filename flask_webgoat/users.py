@@ -44,4 +44,4 @@ def create_user():
         query_db(query, [], False, True)
         return jsonify({"success": True})
     except sqlite3.Error as err:
-        return jsonify({"error": "could not create user:" + err})
+        return jsonify({"error": f"could not create user:{err}"})
